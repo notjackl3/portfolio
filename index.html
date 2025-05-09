@@ -12,17 +12,17 @@
   <br>
   <div class="content">
     <header id="header" class="header">
-      <a href="#" class="logo"> Jack Le </a>
+      <a href="/home" class="logo"> Jack Le </a>
       <nav id="navbar" class="navbar">
         <a href="#"> About </a>
-        <a href="#"> Resume </a>
-        <a href="#"> Contact </a>
+        <a href="assets/Huu An Duc (Jack) Le Resume.pdf" target="_blank">Resume</a>
+        <a id="contact" href="https://linktr.ee/jackl3"> Contact </a>
       </nav>
     </header>
 
     <div class="scroll-locked"></div>
 
-    <div class="container-right container-top">
+    <div class="container-right container-top" onmouseover="contact()" onmouseout="uncontact()">
       <div class="hover-overlay"> Get in touch! </div>
       <div class="bio">
         <h1> Huu An Duc Le </h1>
@@ -141,6 +141,22 @@
   </div>
 
   <script type="text/javascript">
+    function contact() {
+      const contact = document.getElementById("contact");
+      contact.style.color = "white";
+      contact.style.backgroundColor = "red";
+      contact.style.padding = "0px 10px 0px 10px";
+      contact.style.borderRadius = "5px";
+      contact.style.fontSize = "28px";
+    }
+
+    function uncontact() {
+      const contact = document.getElementById("contact");
+      contact.style.backgroundColor = "";
+      contact.style.fontSize = "18px";
+      contact.style.color = "rgb(70, 130, 169)";
+    }
+
     var lastScrollTop = 0;
     var threshold = 200;
     navbar = document.getElementById("header");
